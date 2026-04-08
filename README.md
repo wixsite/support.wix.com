@@ -265,5 +265,4 @@ p {
 </div>
 
 </body>
-</html># support.wix.com
-Threat-Level Protection configuration 
+</html>
